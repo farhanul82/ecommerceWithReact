@@ -17,8 +17,8 @@ const WomenProd = () => {
   return (
     <div className="container-fluid">
       <div className="row productBackground">
-        <div className="col-12 col-md-12  ">
-          <div className="row d-flex justify-content-between ">
+        <div className=" col-md-12  ">
+          <div className="row d-flex justify-content-center ">
             {products.map((items) => {
               // console.log(items);
               return <RenderWomenProd items={items}></RenderWomenProd>;

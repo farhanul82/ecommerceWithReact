@@ -11,11 +11,11 @@ const Order = () => {
   return (
     <div className="container-fluid">
       <div className="row">
-        <div className=" col-6 col-md-6">
+        <div className=" col-md-6 d-flex justify-content-center">
           <img className="orderGif" src="/images/checkout/2.gif"></img>
         </div>
 
-        <div className=" col-6 col-md-6 d-flex justify-content-between">
+        <div className="  col-md-6 d-flex justify-content-between">
           <div className="checkOutstraightLine"></div>
           <div className="orderTextdiv">
             Hello Mr. <span className="orderName">{name}</span>. Your order has
@@ -23,7 +23,7 @@ const Order = () => {
             <Shake>
               <span className="orderTime"> 72</span>
             </Shake>{" "}
-            hrs.<hr></hr> <span className="orderthnks">Thank You</span>
+            hrs.<hr></hr> <span className=" text-right">Thank You</span>
           </div>
         </div>
       </div>

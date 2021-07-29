@@ -13,7 +13,7 @@ const RendercatItems = ({ items }) => {
   const dispatch = useDispatch();
   console.log(items);
   return (
-    <div className="col-4 col-md-4  ">
+    <div className="col-md-4  ">
       <Flip left>
         <Card>
           <div className="img-container">

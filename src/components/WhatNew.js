@@ -11,7 +11,7 @@ const WhatNew = () => {
   return (
     <div className="container-fluid " style={{ background: "teal" }}>
       <div className="row">
-        <div className="col-6 col-md-6 WhstNewCol">
+        <div className=" col-md-6  WhstNewCol">
           <Card className="WhstNewCard">
             <div className="img-container">
               <Card.Img
@@ -36,7 +36,7 @@ const WhatNew = () => {
           </Card>
         </div>
 
-        <div className="col-6 col-md-6 WhstNewCol">
+        <div className="col-md-6 WhstNewCol">
           <Card className="WhstNewCard">
             <div className="img-container">
               <Card.Img

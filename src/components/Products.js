@@ -21,7 +21,7 @@ const Products = () => {
       </div>
       <div className="row productBackground">
         <div className="col-12 col-md-12  ">
-          <div className="row d-flex justify-content-between ">
+          <div className="row d-flex justify-content-around ">
             {products.map((items) => {
               // console.log(items);
               return <ProdItems items={items}></ProdItems>;

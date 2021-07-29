@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 
 .nav {
   position: relative;
   margin-left: auto;
-  width: 470;
+  width: 470px;
   height: 50px;
   background: #34495e;
   border-radius: 8px;
@@ -43,6 +44,12 @@ nav .navbar__link--active {
   height: 100%;
 }
 
+.brand {
+  font-family: "Dancing Script", cursive;
+  color: wheat;
+  font-size: 30px;
+}
+
 .nav .navLink1 {
   width: 100px;
 }
@@ -79,6 +86,7 @@ nav .navLink4:hover ~ .animation {
 .carouselSec {
   background: black;
   overflow: hidden;
+  height: 100vh;
 }
 
 .carousel {
@@ -110,12 +118,14 @@ nav .navLink4:hover ~ .animation {
 
 .sec1Tittle {
   width: 75%;
-  margin-left: 134px;
+
   margin-top: 19px;
   padding: 52px;
   text-align: center;
 }
-
+.carousalImg {
+  height: 100vh;
+}
 .slidertitle {
   font-family: "Sacramento", cursive;
   font-weight: bold;
@@ -155,6 +165,9 @@ nav .navLink4:hover ~ .animation {
   color: aliceblue;
 }
 
+.frontSec2 {
+}
+
 /* .frontSec2 {
   top: -288px;
   position: relative;
@@ -167,7 +180,7 @@ nav .navLink4:hover ~ .animation {
 
 .Sec2text {
   font-family: "Sacramento", cursive;
-  margin-left: 125px;
+
   margin-top: 96px;
   text-transform: capitalize;
   font-weight: bold;
@@ -418,11 +431,47 @@ nav .navLink4:hover ~ .animation {
 .checkoutRow {
   margin-top: 13px;
 }
-.chekout {
-  background: bisque;
-  /* position: relative;
-  width: 730px;
-  margin-left: 112px; */
+
+.content-table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  width: 400px;
+  border-radius: 5px 5px 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+  font-weight: bold;
+}
+
+.content-table th {
+  padding: 12px 15px;
+}
+
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+.content-table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
 }
 
 .paymentBtn button {
@@ -485,10 +534,14 @@ nav .navLink4:hover ~ .animation {
   margin-right: 248px;
 } */
 
+.checkoutImg {
+  position: relative;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+
 .checkoutremoveItems {
-  margin-top: 35px;
-  height: 26px;
-  margin-right: 192px;
 }
 
 .Price {
@@ -498,10 +551,19 @@ nav .navLink4:hover ~ .animation {
 
 .checkOutTotal {
   position: relative;
-  background: black;
-  color: wheat;
-  width: fit-content;
-  margin-left: 640px;
+  background: #002f00;
+  color: white;
+  width: -moz-fit-content;
+  width: 30%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.checkOutTotal h4 {
+  font-size: 15px;
+  margin-top: 8px;
 }
 
 .checkOutTotalPrice {
@@ -563,7 +625,7 @@ nav .navLink4:hover ~ .animation {
 
 .checkoutGif {
   width: 85%;
-  margin-left: 60px;
+
 }
 
 .orderName {
@@ -767,4 +829,270 @@ input[type="radio"] {
   color: whitesmoke;
   text-align: center;
   font-size: 18px;
+}
+
+@media screen and (min-width: 771px) and (max-width: 1023px) {
+  .Sec2text {
+    margin-left: 0px;
+  }
+
+  .sec2img {
+    margin-left: 0px;
+  }
+
+  .checkOutTotalPrice h5 {
+    font-size: 94%;
+    margin-top: 3%;
+  }
+
+  .chatBotbtn{
+    left: 0px;
+  }
+
+  .react-chatbot-kit-chat-container{
+    left: 0px;
+    width: 235px;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+  .sec1Tittle {
+    margin-left: 0px;
+    width: 100%;
+
+    margin-top: 150px;
+  }
+
+  .sec2img {
+    margin-left: 0px;
+  }
+
+  .Sec2text {
+    width: 100%;
+    margin-left: auto;
+    color: black;
+    font-weight: bold;
+  }
+
+  .T4 {
+    font-size: 62px;
+    font-weight: 800;
+  }
+
+  .T1 {
+    font-weight: 800;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 770px) {
+  .nav {
+    height: auto;
+    width: 100%;
+  }
+  .nav .navLink {
+    margin: auto;
+  }
+
+  .nav .navLink1 {
+    width: 100px;
+  }
+
+  .navLink1:hover ~ .animation {
+    width: 100px;
+    left: 0;
+    top: 0px;
+  }
+  nav .navLink2 {
+    width: 100px;
+  }
+  nav .navLink2:hover ~ .animation {
+    width: 100px;
+    top: 50px;
+    left: 0px;
+  }
+
+  nav .navLink3 {
+    width: 100px;
+  }
+  nav .navLink3:hover ~ .animation {
+    width: 100px;
+    left: 0px;
+    top: 100px;
+  }
+  nav .navLink4 {
+    width: 160px;
+  }
+  nav .navLink4:hover ~ .animation {
+    width: 100px;
+    left: 0px;
+    top: 150px;
+  }
+
+  .nav .navbar__link--active {
+  }
+
+  .nav .animation {
+    position: absolute;
+    visibility: hidden;
+    height: 50px;
+    margin-left: 150px;
+  }
+  .cartBtn {
+    margin: auto;
+  }
+  .sec2img {
+    margin-left: 0px;
+    width: 100%;
+  }
+
+  .Sec2text {
+    width: 100%;
+    margin-left: auto;
+    color: black;
+    font-weight: bold;
+  }
+
+  .checkOutTotal {
+    width: 50%;
+  }
+
+  .checkOutTotal h5 {
+    font-size: 100%;
+    margin-top: 3%;
+  }
+
+  .cart{
+    position: relative;
+    /* bottom: 31px; */
+    margin-top: -65px;
+    margin: auto;
+  }
+
+  .chatBotbtn{
+    left: 0px;
+  }
+
+  .react-chatbot-kit-chat-container{
+    left: 0px;
+    width: 235px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .nav {
+    height: auto;
+    width: 100%;
+  }
+  .nav .navLink {
+    margin: auto;
+  }
+
+  .nav .navLink1 {
+    width: 100px;
+  }
+
+  .navLink1:hover ~ .animation {
+    width: 100px;
+    left: 0;
+    top: 0px;
+  }
+  nav .navLink2 {
+    width: 100px;
+  }
+  nav .navLink2:hover ~ .animation {
+    width: 100px;
+    top: 50px;
+    left: 0px;
+  }
+
+  nav .navLink3 {
+    width: 100px;
+  }
+  nav .navLink3:hover ~ .animation {
+    width: 100px;
+    left: 0px;
+    top: 100px;
+  }
+  nav .navLink4 {
+    width: 160px;
+  }
+  nav .navLink4:hover ~ .animation {
+    width: 100px;
+    left: 0px;
+    top: 150px;
+  }
+
+  .nav .navbar__link--active {
+  }
+
+  .nav .animation {
+    position: absolute;
+    height: 50px;
+    visibility: hidden;
+    margin-left: 150px;
+  }
+  .cartBtn {
+    margin: auto;
+  }
+
+  .carouselSec {
+    height: 90vh;
+  }
+
+  .carousalImg {
+    height: 90vh;
+  }
+
+  .sec2img {
+    margin-left: 0%;
+    width: 100%;
+    position: relative;
+  }
+
+  .Sec2text {
+    width: 100%;
+    margin-left: auto;
+    color: black;
+    font-weight: bold;
+  }
+
+  .T4 {
+    font-size: 62px;
+    font-weight: 800;
+  }
+
+  .T1 {
+    font-weight: 800;
+  }
+
+  .checkOutTotal {
+    width: 74%;
+  }
+  .content-table {
+    width: 100%;
+  }
+  .checkOutTotal h5 {
+    font-size: 100%;
+    margin-top: 3%;
+  }
+
+  .contact-section form {
+    width: 100%;
+  }
+
+  .cart{
+    position: relative;
+    /* bottom: 31px; */
+    margin-top: -65px;
+    margin: auto;
+  }
+
+  .chatBotbtn{
+    left: 0px;
+  }
+
+  .react-chatbot-kit-chat-container{
+    left: 0px;
+    width: 235px;
+  }
 }

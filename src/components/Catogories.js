@@ -15,7 +15,7 @@ const Catogories = () => {
 
   return (
     <div
-      className="container-fluid categoryDiv"
+      className="container-fluid categoryDiv "
       style={{ background: "antiquewhite" }}
     >
       <div className="row">

@@ -14,7 +14,7 @@ const RenderMenProd = ({ items }) => {
 
   return (
     <div>
-      <div className="col-4 col-md-4  m-1  store-item " key={items.id}>
+      <div className="col-md-4  m-1  store-item " key={items.id}>
         <Card style={{ width: "18rem" }}>
           <div className="img-container">
             <Card.Img

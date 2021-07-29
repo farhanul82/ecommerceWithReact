@@ -16,44 +16,27 @@ import Geolocation from "./Geolocation";
 import MyMapComponent from "./MyMapComponent";
 
 const Checkoutitems = ({ items }) => {
-  console.log("heckout");
+
   const dispatch = useDispatch();
   return (
     <Fade top>
-      <li className="checkOutList">
-        <div className="cart-item d-flex justify-content-between text-capitalize my-3">
-          <img
-            src={items.image}
-            className=" checkout-Item-Img img-fluid rounded-circle"
-            id="item-img"
-            alt=""
-          ></img>
-          <div className="checkout-item-title">
-            <p id="checkout-item-title" className="font-weight-bold mb-0">
-              {items.title}
-            </p>
+      <tr class="active-row">
+        <td className=""> <img
+          src={items.image}
+          className=" checkoutImg"
+          id="item-img"
+          alt=""
+        ></img></td>
+        <td className="text-center">  <span className="prodname"> {items.title}</span> </td>
+        <td className="text-center"> <span >{format(items.price)}</span> x{" "}
+          <span > {items.count}</span></td>
+        <td className="text-center">
+          <a herf onClick={() => dispatch(removeFromCart(items))}><FontAwesomeIcon icon={faTrash} /></a>
+      
 
-            <div className="priceTag">
-              <span
-                id="checkout-item-price"
-                className="cart-item-price"
-                className="mb-0"
-              >
-                <span className="Price">{format(items.price)}</span> x{" "}
-                <span className="Price"> {items.count}</span>
-              </span>
-            </div>
-          </div>
-          <a
-            onClick={() => dispatch(removeFromCart(items))}
-            id="cart-item-remove"
-            className="cart-item-remove"
-          >
-            <FontAwesomeIcon className="checkoutremoveItems" icon={faTrash} />
-          </a>
-        </div>
-        <hr></hr>
-      </li>
+        </td>
+      </tr>
+      
     </Fade>
   );
 };
@@ -65,15 +48,7 @@ const Checkout = () => {
   const length = cartItems.length;
   console.log(length);
   let history = useHistory();
-  // const name = useSelector((state) => state.order.name);
-  // const email = useSelector((state) => state.order.email);
-  // const mobile = useSelector((state) => state.order.mobile);
-  // const address = useSelector((state) => state.order.address);
 
-  // const [Name, setName] = useState(" ");
-  // const [Email, setEmail] = useState(" ");
-  // const [Mobile, setMobile] = useState(" ");
-  // const [Address, setAddress] = useState(" ");
 
   const { register, handleSubmit, watch, errors } = useForm();
   const onSubmit = (data) => {
@@ -81,19 +56,29 @@ const Checkout = () => {
     dispatch(setOrder(data.name, data.email, data.mobile, data.address));
   };
 
-  // function handleClick() {
-  //   history.push("/order");
-  // }
+
   return (
     <div className="container-fluid">
       <div className="row checkoutRow">
-        <div className="col-12 col-md-12">
+        <div className=" col-md-12">
           <Flash>
-            <ul className="chekout">
-              {cartItems.map((items) => {
-                return <Checkoutitems items={items}></Checkoutitems>;
-              })}
-            </ul>
+            <table class="content-table m-auto">
+              <thead>
+                <tr>
+                  <th className="text-center">image</th>
+                  <th className="text-center">Name</th>
+                  <th className="text-center">Price</th>
+                  <th className="text-center">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {cartItems.map((items) => {
+                  return <Checkoutitems items={items}></Checkoutitems>;
+                })}
+
+
+              </tbody>
+            </table>
           </Flash>
         </div>
       </div>
@@ -121,11 +106,11 @@ const Checkout = () => {
       </div>
 
       <div className="row checkoutFormRow">
-        <div className="col-6 col-md-6 ">
+        <div className=" col-md-6 d-flex justify-content-center ">
           <img className="checkoutGif" src="/images/checkout/1.gif"></img>
         </div>
 
-        <div className="col-6 col-md-6">
+        <div className=" col-md-6">
           <div className="contact-section">
             <Zoom bottom>
               {/* "handleSubmit" will validate your inputs before invoking "onSubmit" */}

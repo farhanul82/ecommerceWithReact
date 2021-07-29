@@ -9,9 +9,9 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <div className="container-fluid ">
-      <div className="row carouselSec" style={{ height: "100vh" }}>
+      <div className="row carouselSec" >
         <Carousel>
-          <Carousel.Item>
+          <Carousel.Item className="d-flex justify-content-center">
             <div className="sec1Tittle">
               <h1 className="S1"> Shopping</h1>
               <h2>
@@ -33,8 +33,8 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              style={{ height: "100vh" }}
-              className="d-block w-100"
+
+              className="d-block w-100 carousalImg"
               src="/images/Slider/7.jpg"
               alt="Third slide"
             />
@@ -50,8 +50,8 @@ const Home = () => {
           </Carousel.Item>
           <Carousel.Item>
             <img
-              style={{ height: "100vh" }}
-              className="d-block w-100"
+
+              className="d-block w-100 carousalImg"
               src="/images/frontslides/2.jpg"
               alt="Third slide"
             />
@@ -68,8 +68,8 @@ const Home = () => {
 
           <Carousel.Item>
             <img
-              style={{ height: "100vh" }}
-              className="d-block w-100"
+
+              className="d-block w-100 carousalImg"
               src="/images/Slider/1.jpg"
               alt="Third slide"
             />
@@ -86,8 +86,8 @@ const Home = () => {
 
           <Carousel.Item>
             <img
-              style={{ height: "100vh" }}
-              className="d-block w-100"
+
+              className="d-block w-100 carousalImg"
               src="/images/Slider/4.jpg"
               alt="Third slide"
             />
@@ -104,8 +104,8 @@ const Home = () => {
 
           <Carousel.Item>
             <img
-              style={{ height: "100vh" }}
-              className="d-block w-100"
+
+              className="d-block w-100 carousalImg"
               src="/images/Slider/5.jpg"
               alt="Third slide"
             />
@@ -125,7 +125,7 @@ const Home = () => {
       <div className="frontSec2 row">
         <div className=" sec2 container-fluid">
           <div className="row">
-            <div className=" col-6">
+            <div className=" col-md-6">
               <Fade left big>
                 <img
                   className=" sec2img animate__zoomInDown"
@@ -134,22 +134,25 @@ const Home = () => {
               </Fade>
             </div>
 
-            <div className="Sec2text col6">
-              <h1>
-                <span className="T1"> Lots Of</span>
-                <span className="T2">Categories</span>
-                <br></br>
-                <span className="T3">to</span>
-                <br></br>{" "}
-                <Flash>
-                  {" "}
-                  <span className="T4">Enamor</span>
-                </Flash>
-              </h1>
+            <div className="Sec2text col-md-6 d-flex justify-content-center ">
+              <div>
+                <h1>
+                  <span className="T1"> Lots Of</span>
+                  <span className="T2">Categories</span>
+                  <br></br>
+                  <span className="T3">to</span>
+                  <br></br>{" "}
+                  <Flash>
+                    {" "}
+                    <span className="T4">Enamor</span>
+                  </Flash>
+                </h1>
 
-              <Link to="/category" className="sec2btn btn">
-                Categories
-              </Link>
+                <Link to="/category" className="sec2btn btn">
+                  Categories
+                </Link>
+              </div>
+
             </div>
           </div>
         </div>
